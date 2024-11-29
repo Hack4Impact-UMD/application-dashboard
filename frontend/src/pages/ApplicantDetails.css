@@ -1,0 +1,31 @@
+.applicant-details {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+  }
+  
+  .applicant-details h2 {
+    margin-bottom: 20px;
+  }
+  
+  .applicant-details p {
+    margin: 10px 0;
+  }
+  
+  .applicant-details button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .applicant-details button:hover {
+    background-color: #0056b3;
+  }
+  
