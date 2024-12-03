@@ -1,15 +1,22 @@
 .applicant-details {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ccc;
+    /*max-width: 600px;*/
+    /*border: 1px solid #ccc;
     border-radius: 10px;
-    background-color: #f9f9f9;
+    background-color: #f9f9f9;*/
     font-family: Arial, sans-serif;
   }
-  
+
+  .applicant-name {
+    font-family: Karla;
+    font-weight: 700;
+    font-size: 34px;
+    text-align: left;
+    margin-right: 1100px;
+    margin-left: -130px;
+    margin-top: -10px;
+  }
   .applicant-details h2 {
-    margin-bottom: 20px;
+    margin-bottom: -300px;
   }
   
   .applicant-details p {
