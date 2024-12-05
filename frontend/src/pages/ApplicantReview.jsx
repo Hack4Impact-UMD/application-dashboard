@@ -4,20 +4,6 @@ import ProgressBar from "../components/ProgressBar";
 import FilterBar from "../components/FilterBar";
 import DataTable from "../components/DataTable";
 
-const mockApplicants = [
-  {
-    id: 1,
-    name: "Nya Kassa",
-    email: "akassa@gmail.com",
-    status: "App. Completed",
-    dateApplied: "2024-11-02",
-    roles: ["TL", "Er"],
-    applicationScore: null,
-    interviewScore: null,
-    overallScore: null,
-  },
-];
-
 const ApplicantReview = () => {
   const [search, setSearch] = useState("");
   const [filteredApplicants, setFilteredApplicants] = useState(mockApplicants);

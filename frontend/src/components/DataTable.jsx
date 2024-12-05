@@ -44,7 +44,7 @@ const DataTable = ({ applicants }) => {
                         <td className="table-cell">{applicant.roles.join(', ')}</td>
                         <td className="table-cell">{applicant.applicationScore || '-'}</td>
                         <td className="table-cell">{applicant.interviewScore || '-'}</td>
-                        <td className="table-cell">{applicant.overallScore || '-'}</td>
+                        <td className="table-cell">{applicant.applicationScore + applicant.interviewScore}</td>
                     </tr>
                 ))}
             </tbody>
