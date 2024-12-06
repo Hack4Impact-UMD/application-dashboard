@@ -47,9 +47,54 @@ const ApplicantDetails = () => {
     return <div>Applicant not found.</div>;
   }
 
-  // Function to render rubric for each role
+  const renderGeneralRubric = () => {
+    const defaultQuestions = (
+      <>
+        <div className="score-category">
+          <div className='rubric-questions'>Interest in Club:</div>
+          <div className="radio-buttons">
+            {[1, 2, 3, 4].map((score) => (
+              <label key={`club-${score}`}>
+                <input type="radio" name="interestInClub" value={score} />
+                {score}
+              </label>
+            ))}
+          </div>
+        </div>
+        <div className="score-category">
+          <div className='rubric-questions'>Interest in Social Good:</div>
+          <div className="radio-buttons">
+            {[1, 2, 3, 4].map((score) => (
+              <label key={`social-${score}`}>
+                <input type="radio" name="interestInSocialGood" value={score} />
+                {score}
+              </label>
+            ))}
+          </div>
+        </div>
+        <div className="score-category">
+          <div className='rubric-questions'>Technical Expertise:</div>
+          <div className="radio-buttons">
+            {[1, 2, 3, 4].map((score) => (
+              <label key={`technical-${score}`}>
+                <input type="radio" name="technicalExpertise" value={score} />
+                {score}
+              </label>
+            ))}
+          </div>
+        </div>
+      </>
+    );
+  
+    return (
+      <div className="rubric-box">
+        <div className="bigger-header">General Application Rubric</div>
+        {defaultQuestions}
+      </div>
+    );
+  };
+  
   const renderRubric = (role) => {
-    // Mapping role codes to their full names
     const roleNames = {
       'Er': 'Engineer',
       'TL': 'Tech Lead',
@@ -59,7 +104,45 @@ const ApplicantDetails = () => {
       'Bp': 'Bootcamp Program'
     };
 
-    const roleName = roleNames[role] || role; // Default to role code if not found
+    const roleName = roleNames[role] || role;
+
+    const defaultQuestions = (
+      <>
+        <div className="score-category">
+          <div className='rubric-questions'>Interest in Club:</div>
+          <div className="radio-buttons">
+            {[1, 2, 3, 4].map((score) => (
+              <label key={`club-${score}`}>
+                <input type="radio" name="interestInClub" value={score} />
+                {score}
+              </label>
+            ))}
+          </div>
+        </div>
+        <div className="score-category">
+          <div className='rubric-questions'>Interest in Social Good:</div>
+          <div className="radio-buttons">
+            {[1, 2, 3, 4].map((score) => (
+              <label key={`social-${score}`}>
+                <input type="radio" name="interestInSocialGood" value={score} />
+                {score}
+              </label>
+            ))}
+          </div>
+        </div>
+        <div className="score-category">
+          <div className='rubric-questions'>Technical Expertise:</div>
+          <div className="radio-buttons">
+            {[1, 2, 3, 4].map((score) => (
+              <label key={`technical-${score}`}>
+                <input type="radio" name="technicalExpertise" value={score} />
+                {score}
+              </label>
+            ))}
+          </div>
+        </div>
+      </>
+    );
 
     const engineerQuestions = (
       <>
@@ -113,44 +196,6 @@ const ApplicantDetails = () => {
             {[1, 2, 3, 4].map((score) => (
               <label key={`coding-experience-${score}`}>
                 <input type="radio" name={`coding-experience-${role}`} value={score} />
-                {score}
-              </label>
-            ))}
-          </div>
-        </div>
-      </>
-    );
-
-    const defaultQuestions = (
-      <>
-        <div className="score-category">
-          <div className='rubric-questions'>Interest in Club:</div>
-          <div className="radio-buttons">
-            {[1, 2, 3, 4].map((score) => (
-              <label key={`club-${score}`}>
-                <input type="radio" name={`interestInClub-${role}`} value={score} />
-                {score}
-              </label>
-            ))}
-          </div>
-        </div>
-        <div className="score-category">
-          <div className='rubric-questions'>Interest in Social Good:</div>
-          <div className="radio-buttons">
-            {[1, 2, 3, 4].map((score) => (
-              <label key={`social-${score}`}>
-                <input type="radio" name={`interestInSocialGood-${role}`} value={score} />
-                {score}
-              </label>
-            ))}
-          </div>
-        </div>
-        <div className="score-category">
-          <div className='rubric-questions'>Technical Expertise:</div>
-          <div className="radio-buttons">
-            {[1, 2, 3, 4].map((score) => (
-              <label key={`technical-${score}`}>
-                <input type="radio" name={`technicalExpertise-${role}`} value={score} />
                 {score}
               </label>
             ))}
@@ -375,6 +420,7 @@ const ApplicantDetails = () => {
         </div>
 
         <div className="tech-lead-scores-box">
+          {renderGeneralRubric()}
           {applicant.roles && applicant.roles.map((role, index) => (
             <div key={index}>
               {renderRubric(role)}
