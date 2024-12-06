@@ -58,7 +58,8 @@
   padding: 20px;
   background-color: #ffffff;
   height: 555px;
-  min-width: 650px;
+  min-width: 700px;
+  margin-left: -40px;
   overflow-y: auto;
 }
 
@@ -69,7 +70,7 @@
   padding: 10px;
   background-color: #ffffff;
   height: 590px;
-  min-width: 575px;
+  min-width: 550px;
   overflow-y: auto;
 }
 

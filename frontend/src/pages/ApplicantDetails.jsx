@@ -72,17 +72,6 @@ const ApplicantDetails = () => {
             ))}
           </div>
         </div>
-        <div className="score-category">
-          <div className='rubric-questions'>Technical Expertise:</div>
-          <div className="radio-buttons">
-            {[1, 2, 3, 4].map((score) => (
-              <label key={`technical-${score}`}>
-                <input type="radio" name="technicalExpertise" value={score} />
-                {score}
-              </label>
-            ))}
-          </div>
-        </div>
       </>
     );
   
@@ -146,6 +135,36 @@ const ApplicantDetails = () => {
 
     const engineerQuestions = (
       <>
+      <div className="score-category">
+          <div className='rubric-questions'>Technical Expertise:</div>
+          <div className="radio-buttons">
+            {[1, 2, 3, 4].map((score) => (
+              <label key={`technical-${score}`}>
+                <input type="radio" name="technicalExpertise" value={score} />
+                {score}
+              </label>
+            ))}
+          </div>
+        </div>
+        
+      </>
+    )
+
+
+
+    const techAssessmentQuestions = (
+      <>
+      <div className="score-category">
+          <div className='rubric-questions'>Technical Expertise</div>
+          <div className="radio-buttons">
+            {[1, 2, 3, 4].map((score) => (
+              <label key={`problem-solving-${score}`}>
+                <input type="radio" name={`problem-solving-${role}`} value={score} />
+                {score}
+              </label>
+            ))}
+          </div>
+        </div>
         <div className="score-category">
           <div className='rubric-questions'>Functionality</div>
           <div className="radio-buttons">
@@ -207,9 +226,9 @@ const ApplicantDetails = () => {
     return (
       <div className="rubric-box">
         <div className="bigger-header">{roleName} Application Rubric</div>
-        <a href="/rubric" target="_blank" className="rubric-link">Rubric Link</a>
+        <a href="https://www.notion.so/h4i/Application-Rubric-368daf70447f4eb58ba6c74e6b3d6989" target="_blank" className="rubric-link">Rubric Link</a>
 
-        {roleName === 'Engineer' ? engineerQuestions : defaultQuestions}
+        {roleName === 'Engineer' ? techAssessmentQuestions : defaultQuestions}
       </div>
     );
   };

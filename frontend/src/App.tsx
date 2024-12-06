@@ -153,7 +153,7 @@ function App() {
                     <h2 className="box-title">Number of Applicants:</h2>
                     <h2 className="box-title">Applicants Finalized</h2>
                   </div>
-                  <ProgressBar finalized={1} total={filteredApplicants.length} />
+                  <ProgressBar finalized={finalizedApplicants.length} total={allApplicants.length} />
                   <div className="numbers">
                     <span className="applicants-count">{allApplicants.length}</span>
                     <span className="finalized-count">{finalizedApplicants.length}</span>

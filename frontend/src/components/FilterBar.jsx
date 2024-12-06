@@ -51,7 +51,7 @@ const FilterBar = ({ onSearch, onSortByDate, onRoleFilter, selectedRole }) => {
         <option value="Sg">Sourcing (Sg)</option>
         <option value="Ds">Designer (Ds)</option>
         <option value="PM">Project Manager (PM)</option>
-        <option value="BP">Bootcamp Program (BP)</option>
+        <option value="Bp">Bootcamp Program (BP)</option>
       </select>
 
       <button
