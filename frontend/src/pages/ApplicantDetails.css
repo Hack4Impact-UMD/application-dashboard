@@ -8,7 +8,7 @@
   font-size: 34px;
   text-align: left;
   margin-right: 1100px;
-  margin-left: -90px;
+  margin-left: -70px;
   margin-top: -10px;
 }
 
@@ -55,10 +55,10 @@
   flex: 1;
   border: 11px solid #CBF9F3;
   border-radius: 8px;
-  padding: 10px;
+  padding: 20px;
   background-color: #ffffff;
-  height: 600px;
-  min-width: 550px;
+  height: 555px;
+  min-width: 650px;
   overflow-y: auto;
 }
 
@@ -68,8 +68,8 @@
   border-radius: 8px;
   padding: 10px;
   background-color: #ffffff;
-  height: 616px;
-  min-width: 550px;
+  height: 590px;
+  min-width: 575px;
   overflow-y: auto;
 }
 
@@ -89,20 +89,18 @@
   text-align: left;
   margin-left: 30px;
   margin-top: 10px;
+  padding: 10px;
 }
 
-/* Additional Styling */
 .general-questions-box h2,
 .tech-lead-scores-box h2 {
   margin-bottom: 15px;
 }
 
 .rubric-box {
-  margin-bottom: 30px; /* Space between each rubric */
+  margin-bottom: 30px; 
   padding: 20px;
   margin-top: 10px;
-  /* border: 2px solid #000000;
-  border-radius: 8px; */
 }
 
 .rubric-link {
